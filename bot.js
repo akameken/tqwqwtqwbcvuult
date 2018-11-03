@@ -9,11 +9,6 @@ client.on('message', message => {
     
     let args = message.content.split(' ').slice(1).join(' ');
     
-  if (message.content === 'ping') {
-      message.channel.send(`<@${message.author.id}> Ping..!`)
-  }
-  
-  
   if (message.content.startsWith('~bc')) {
           if (!args[0]) {
 message.channel.send("**~bc <message>**");
@@ -30,7 +25,8 @@ message.guild.members.forEach(m => {
 
 
 client.on('ready', function() {
-    console.log(`i am ready ${client.user.username}`);
+    console.log(`i am ready ${client.user.username}`)
+  
 });
 
 
